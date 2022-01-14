@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     height: 100%;
-    
+    width: 100%;
 }
 
 #type {
@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
 }
 .main-container {
     /*min-height: 100vh;*/
-    overflow: hidden;
+    overflow: show;
     display: block;
     position: relative;
     margin: 0;
@@ -130,7 +130,7 @@ body::-webkit-scrollbar {
 
 footer {
 	background-color: rgb(0, 1, 34);
-	padding: 25px;
+	padding-top: 3vh;
     height: 15%;
     width: 100%;
     position:fixed;

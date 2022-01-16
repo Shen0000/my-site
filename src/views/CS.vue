@@ -1,31 +1,37 @@
 <template>
   <div class="CS">
-    <div class="head">
-        <h1 class="title">Welcome to my CS page!</h1>
-        <h2>Here you can find all things about my journey in computer science</h2>
-        <div class="result-container" v-if="cfResponse=='OK'">
-          <div class="cfdata" v-for="user in cfData" v-bind:key="user.id">
-            <h2>Rating of {{user.handle}}: {{user.rating}}</h2>
-            <!-- <h3>{{user.rating}}</h3> -->
-          </div>
-        </div>
-        <div class="result-container" v-else-if="cfResponse">
-          <p>Please enter a valid handle!</p>
-        </div>
-        <div class="result-container" v-else>
-          <h2>Enter a handle to search</h2>
-        </div>
-        <div class="innerf">
-          <form v-on:submit.prevent="submitForm">
-            <p>Handle:</p>
-            <div class="form-group">
-                <input type="text" class="form-control" id="handle" placeholder="" v-model="form.handle">
-            </div>
-            <input type="submit" value="submit">
-          </form>
-        </div>
-        
+    <h1 class="title">Welcome to my CS page!</h1>
+    <h2>Here you can find all things about my journey in computer science</h2>
+    <div class="result-container" v-if="cfResponse=='OK'">
+      <div class="cfdata" v-for="user in cfData" v-bind:key="user.id">
+        <h2 v-if="user.rating">Rating of {{user.handle}}: 
+          <span class="rating" v-if="user.rank=='newbie'" style="color: #9e9ea7">{{user.rating}}</span>
+          <span class="rating" v-else-if="user.rank=='pupil'" style="color: #148625">{{user.rating}}</span>
+          <span class="rating" v-else-if="user.rank=='specialist'" style="color: #23aeba">{{user.rating}}</span>
+          <span class="rating" v-else-if="user.rank=='expert'" style="color: #100cff">{{user.rating}}</span>
+          <span class="rating" v-else-if="user.rank=='candidate master'" style="color: #b520b0">{{user.rating}}</span>
+          <span class="rating" v-else-if="user.rank=='master' || user.rank=='international master'" style="color: #ff910c">{{user.rating}}</span>
+          <span class="rating" v-else style="color: #ff0019">{{user.rating}}</span>
+        </h2>
+        <h2 v-else>Rating of {{user.handle}}: Unrated</h2>
+      </div>
     </div>
+    <div class="result-container" v-else-if="cfResponse">
+      <h2>Please enter a valid handle!</h2>
+    </div>
+    <div class="result-container" v-else>
+      <h2>Enter a handle to search</h2>
+    </div>
+    <div class="innerf">
+      <form v-on:submit.prevent="submitForm">
+        <p>Handle:</p>
+        <div class="form-group">
+            <input type="text" class="form-control" id="handle" placeholder="" v-model="form.handle">
+        </div>
+        <input type="submit" value="submit">
+      </form>
+    </div>
+    <!-- {{cfData}} -->
   </div>
 </template>
 
@@ -38,7 +44,7 @@ export default {
         cfData: [],
         form: {
           handle: ''
-        }
+        },
       };
     },
     methods: {
@@ -77,6 +83,11 @@ export default {
 CSS taken from https://waylandcs.com
 */
 
+.CS {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .result-container {
     border: 5px dashed #3a47f8;
     margin: 0 auto;
@@ -84,13 +95,13 @@ CSS taken from https://waylandcs.com
     border-radius: 10px;
     width: 30%;
     padding-bottom: 30px;
-    margin-top: 25vh;
+    margin-top: 10vh;
     /*margin: 0;*/
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: relative;
+    /* top: 40%; */
+    /* left: 50%; */
+    /* -ms-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
     background-color: #1f1d1d;
 }
 
@@ -101,13 +112,13 @@ CSS taken from https://waylandcs.com
     border-radius: 10px;
     width: 30%;
     padding-bottom: 30px;
-    margin-top: 52vh;
+    margin-top: 5vh;
     /*margin: 0;*/
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: relative;
+    /* top: 40%; */
+    /* left: 50%; */
+    /* -ms-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
     background-color: #1f1d1d;
 }
 

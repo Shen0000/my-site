@@ -45,16 +45,18 @@ export default {
 <style scoped>
 
 .academics {
-    margin-left: 10px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
     padding: 10px;
     text-align: left;
     line-height: 200%;
-    position:relative; 
-    float:left; 
+    position:center; 
+    justify-content: center;
+    float:center; 
     left:30px; 
     top:45px; 
     width:92vw;
-    height: 40vh;
     border:1px solid black; 
     border-bottom: px solid black;
 }

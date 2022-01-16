@@ -37,13 +37,12 @@
     margin: 0;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    /*min-height: 50vh;*/
+    min-height: 100vh;
     /*the above is*/
     background-color: rgb(9, 23, 90);
 }
@@ -61,7 +60,6 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
 }
 
 #type {
@@ -146,11 +144,11 @@ body::-webkit-scrollbar {
 
 footer {
 	background-color: rgb(0, 1, 34);
-	padding-top: 3vh;
+    /* padding: 3vw; */
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     height: 15%;
     width: 100%;
-    position:fixed;
-    bottom:0;
 }
 
 .footer-text {

@@ -4,13 +4,29 @@
       <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
       <router-link to="/about" class="nav-link">About</router-link>
       <router-link to="/academics" class="nav-link">Academics</router-link>
-      <router-link to="/Projects" class="nav-link">Projects</router-link>
+      <router-link to="/projects" class="nav-link">Projects</router-link>
+      <router-link to="/cs" class="nav-link">CS</router-link>
     </div>
     <body>
       <router-view/>
     </body>
     <footer>
-      <h1 style="color: rgb(255, 255, 255)">Hello World Footer</h1>
+      <!-- <h1 style="color: rgb(255, 255, 255)">Hello World Footer</h1> -->
+      <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="mailto: bshen.324@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://github.com/shen0000" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://codeforces.com/profile/bshen324" target="_blank"><i class="fas fa-laptop-code" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://www.facebook.com/brendan.shen.31/" target="_blank"><i class="fab fa-facebook square" aria-hidden="true"></i></a>
+          </li>
+      </ul>
+      
     </footer>
   </div>
 </template>
@@ -175,7 +191,7 @@ footer {
 
 .social-list__link {
 	font-size: 40px;
-	color: #ffbc57;
+	color: #57ddff;
 	padding: .5em;
 }
 

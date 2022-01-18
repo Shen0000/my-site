@@ -10,7 +10,7 @@
             <h3 class="subtitle">
               <em> This fall, I worked with another classmate Kevin Zhao, to create a fully operational generals.io bot that could play generals.</em>
               <br>
-              <i>background credit to dev.generals.io</i>
+              <i>background credit to <a href="https://dev.generals.io/" target="empty">dev.generals.io</a></i> 
             </h3>
             <div class="empty"></div>
             <a href="https://github.com/Shen0000/Generals.io-bot-python" class="btn" target="empty"
@@ -90,6 +90,29 @@ export default {
     line-height: 200%;
 }
 
+a:link {
+  color: rgb(32, 180, 238);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(44, 58, 248);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(44, 58, 248);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(196, 27, 5);
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 /* CSS modelled from waylandcs.com */
 .overlay {
@@ -135,7 +158,7 @@ export default {
   padding: 20px;
   border: 2px solid#010314;
   border-radius: 25px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
 }

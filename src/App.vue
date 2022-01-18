@@ -44,7 +44,7 @@ body {
     scrollbar-width: none;  /* Firefox */
     min-height: 100vh;
     /*the above is*/
-    background-color: rgb(9, 23, 90);
+    background: linear-gradient(#081659, #000121);
 }
 
 body::-webkit-scrollbar {

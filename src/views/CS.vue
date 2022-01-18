@@ -1,19 +1,43 @@
 <template>
   <div class="CS">
+    <!-- <v-select class="dropdown" placeholder="" v-model="option" :options="['Rating', 'Rank']" ></v-select> -->
     <h1 class="title">Welcome to my CS page!</h1>
     <h2>Here you can find all things about my journey in computer science</h2>
     <div class="result-container" v-if="cfResponse=='OK'">
       <div class="cfdata" v-for="user in cfData" v-bind:key="user.id">
-        <h2 v-if="user.rating">Rating of {{user.handle}}: 
-          <span class="rating" v-if="user.rank=='newbie'" style="color: #9e9ea7">{{user.rating}}</span>
-          <span class="rating" v-else-if="user.rank=='pupil'" style="color: #148625">{{user.rating}}</span>
-          <span class="rating" v-else-if="user.rank=='specialist'" style="color: #23aeba">{{user.rating}}</span>
-          <span class="rating" v-else-if="user.rank=='expert'" style="color: #100cff">{{user.rating}}</span>
-          <span class="rating" v-else-if="user.rank=='candidate master'" style="color: #b520b0">{{user.rating}}</span>
-          <span class="rating" v-else-if="user.rank=='master' || user.rank=='international master'" style="color: #ff910c">{{user.rating}}</span>
-          <span class="rating" v-else style="color: #ff0019">{{user.rating}}</span>
-        </h2>
-        <h2 v-else>Rating of {{user.handle}}: Unrated</h2>
+        <div class="mode-rating" v-if="option=='Rating'">
+          <img :src="user.avatar" alt="profile">
+          <h2 v-if="user.rating">Rating of {{user.handle}}: 
+            <span class="rating" v-if="user.rank=='newbie'" style="color: #9e9ea7">{{user.rating}}</span>
+            <span class="rating" v-else-if="user.rank=='pupil'" style="color: #148625">{{user.rating}}</span>
+            <span class="rating" v-else-if="user.rank=='specialist'" style="color: #23aeba">{{user.rating}}</span>
+            <span class="rating" v-else-if="user.rank=='expert'" style="color: #100cff">{{user.rating}}</span>
+            <span class="rating" v-else-if="user.rank=='candidate master'" style="color: #b520b0">{{user.rating}}</span>
+            <span class="rating" v-else-if="user.rank=='master' || user.rank=='international master'" style="color: #ff910c">{{user.rating}}</span>
+            <span class="rating" v-else style="color: #ff0019">{{user.rating}}</span>
+          </h2>
+          <h2 v-else>Rating of {{user.handle}}: Unrated</h2>
+        </div>
+        <div class="mode-rank" v-else-if="option=='Rank'">
+          <img :src="user.avatar" alt="profile">
+          <h2 v-if="user.rank">Rank of {{user.handle}}: 
+            <span class="rating" v-if="user.rank=='newbie'" style="color: #9e9ea7">{{user.rank}}</span>
+            <span class="rating" v-else-if="user.rank=='pupil'" style="color: #148625">{{user.rank}}</span>
+            <span class="rating" v-else-if="user.rank=='specialist'" style="color: #23aeba">{{user.rank}}</span>
+            <span class="rating" v-else-if="user.rank=='expert'" style="color: #100cff">{{user.rank}}</span>
+            <span class="rating" v-else-if="user.rank=='candidate master'" style="color: #b520b0">{{user.rank}}</span>
+            <span class="rating" v-else-if="user.rank=='master' || user.rank=='international master'" style="color: #ff910c">{{user.rank}}</span>
+            <span class="rating" v-else style="color: #ff0019">{{user.rank}}</span>
+          </h2>
+          <h2 v-else>Rank of {{user.handle}}: Unrated</h2>
+        </div>
+        <div class="mode-name" v-else-if="option=='Name'">
+          <img :src="user.avatar" alt="profile">
+          <h2>Name of {{user.handle}}: {{user.firstName}} {{user.lastName}}</h2>
+        </div>
+        <div class="mode-none" v-else>
+          <h2>Please select an option to get data</h2>
+        </div>
       </div>
     </div>
     <div class="result-container" v-else-if="cfResponse">
@@ -23,8 +47,11 @@
       <h2>Enter a handle to search</h2>
     </div>
     <div class="innerf">
+      <v-select class="dropdown" placeholder="" v-model="option" :options="['Rating', 'Rank', 'Name']"  />
       <form v-on:submit.prevent="submitForm">
-        <p>Handle:</p>
+        <br>
+        <h2>Handle:</h2>
+        <br>
         <div class="form-group">
             <input type="text" class="form-control" id="handle" placeholder="" v-model="form.handle">
         </div>
@@ -36,6 +63,7 @@
 </template>
 
 <script>
+
 export default {
     name: "CS",
     data() {
@@ -45,6 +73,7 @@ export default {
         form: {
           handle: ''
         },
+        option: 'Rating',
       };
     },
     methods: {
@@ -69,7 +98,7 @@ export default {
           this.getData();
           this.form.handle = "";
         } 
-      }
+      },
     },
     created() {
       this.getData();
@@ -89,7 +118,7 @@ CSS taken from https://waylandcs.com
 }
 
 .result-container {
-    border: 5px dashed #3a47f8;
+    border: 3px solid #3a47f8;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -106,7 +135,7 @@ CSS taken from https://waylandcs.com
 }
 
 .innerf {
-    border: 5px dashed #3a47f8;
+    border: 3px solid #3a47f8;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -170,9 +199,13 @@ input[type=submit]:hover {
     background-color: rgb(9, 6, 151);;
     color: #2a50fa;
     border: 1px solid #2a50fa;
+}
 
-
-
+.dropdown {
+    width: 30vw;
+    position: relative;
+    border: 1px solid #3a47f8;
+    border-radius: 5px;
 }
 
 </style>

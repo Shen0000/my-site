@@ -6,6 +6,7 @@
       <router-link to="/academics" class="nav-link">Academics</router-link>
       <router-link to="/projects" class="nav-link">Projects</router-link>
       <router-link to="/cs" class="nav-link">CS</router-link>
+      <router-link to="/theme" class="nav-link">Theme</router-link>
     </div>
     <body>
       <router-view/>

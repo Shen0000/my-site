@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Academics from '../views/Academics.vue'
 import Projects from '../views/Projects.vue'
 import CS from '../views/CS.vue'
+import Theme from '../views/Theme.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/cs',
     name: 'CS',
     component: CS
+  },
+  {
+    path: '/theme',
+    name: 'Theme',
+    component: Theme
   },
   {
     path: '/about',

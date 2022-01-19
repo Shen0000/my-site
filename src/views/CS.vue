@@ -118,7 +118,7 @@ CSS taken from https://waylandcs.com
 }
 
 .result-container {
-    border: 3px solid #3a47f8;
+    border: 3px solid var(--border);
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -131,11 +131,12 @@ CSS taken from https://waylandcs.com
     /* left: 50%; */
     /* -ms-transform: translate(-50%, -50%); */
     /* transform: translate(-50%, -50%); */
-    background-color: #1f1d1d;
+    background-color: var(--footer);
+    transition: background-color 2s, border 2s;
 }
 
 .innerf {
-    border: 3px solid #3a47f8;
+    border: 3px solid var(--border);
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -148,7 +149,8 @@ CSS taken from https://waylandcs.com
     /* left: 50%; */
     /* -ms-transform: translate(-50%, -50%); */
     /* transform: translate(-50%, -50%); */
-    background-color: #1f1d1d;
+    background-color: var(--footer);
+    transition: background-color 2s, border 2s;
 }
 
 input {
@@ -189,16 +191,16 @@ input[type=submit] {
     margin: 8px 0;
     margin-top: 30px;
     border-radius: 10px;
-    background-color: #23a7ff;
+    background-color: var(--button);
     border: 1px solid #111;
 
 }
 input[type=submit]:hover {
     cursor: pointer;
     text-transform: lowercase;
-    background-color: rgb(9, 6, 151);;
-    color: #2a50fa;
-    border: 1px solid #2a50fa;
+    background-color: var(--button-hover);
+    color: var(--button-hover-text);
+    border: 1px solid var(--button-hover-text);
 }
 
 .dropdown {

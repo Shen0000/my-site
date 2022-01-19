@@ -1,13 +1,14 @@
 <template>
   <div id="app" class="main-container" v-bind:class="picked">
     <div id="nav">
-      <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
-      <router-link to="/about" class="nav-link">About</router-link>
-      <router-link to="/academics" class="nav-link">Academics</router-link>
-      <router-link to="/projects" class="nav-link">Projects</router-link>
-      <router-link to="/cs" class="nav-link">CS</router-link>
-      <router-link to="/theme" class="nav-link">Theme</router-link>
       <div class="color-palettes">
+        <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
+        <router-link to="/about" class="nav-link">About</router-link>
+        <router-link to="/academics" class="nav-link">Academics</router-link>
+        <router-link to="/projects" class="nav-link">Projects</router-link>
+        <router-link to="/cs" class="nav-link">CS</router-link>
+        <router-link to="/theme" class="nav-link">Theme</router-link>
+        <h1 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h1>
         <input
             v-for="color in colors"
             type="radio"
@@ -16,6 +17,7 @@
             :value="color.value"
             :key="color.index"
             v-model="picked"
+            style="margin-left: 20px;"
         />
         </div>
     </div>
@@ -72,7 +74,9 @@ body {
     scrollbar-width: none;  /* Firefox */
     min-height: 100vh;
     /*the above is*/
-    background: linear-gradient(#081659, #000121);
+    color: var(--text-color-primary);
+    background-color: var(--body);
+    transition: background-color 2s, color 2s;
 }
 
 body::-webkit-scrollbar {
@@ -110,13 +114,15 @@ body::-webkit-scrollbar {
     vertical-align: middle;
     display: table;
     width: 100%;
+    transition: all 2s;
 }
 
 
 #nav a {
     font-weight: bold;
     vertical-align: middle;
-    color: #4d77ff;
+    color: var(--nav-link);
+    transition: color 2s;
 }
 
 #nav a:hover {
@@ -124,7 +130,7 @@ body::-webkit-scrollbar {
 }
 
 #nav a.router-link-exact-active {
-    color: #1302ff;
+    color: var(--nav-link-exact);
 }
 
 .logo {
@@ -171,12 +177,13 @@ body::-webkit-scrollbar {
 }
 
 footer {
-	background-color: rgb(0, 1, 34);
+	background-color: var(--footer);
     /* padding: 3vw; */
     padding-top: 2vh;
     padding-bottom: 2vh;
     height: 15%;
     width: 100%;
+    transition: all 2s;
 }
 
 .footer-text {
@@ -217,8 +224,9 @@ footer {
 
 .social-list__link {
 	font-size: 40px;
-	color: #57ddff;
+	color: var(--social);
 	padding: .5em;
+    transition: color 2s;
 }
 
 .title {
@@ -229,50 +237,63 @@ footer {
 .blue {
   --color: #081659;
   --color-secondary: #000121;
-  --nav: rgb(17, 4, 54);
-  background:#078fe9;
+  --nav: rgb(13, 15, 133);
+  --nav-link: #4db8ff;
+  --nav-link-exact: #02f7ff;
+  --body: #081659;
+  --footer: #000121;
+  --social: #57ddff;
+  --border: #3a47f8;
+  --button: #23a7ff;
+  --button-hover: rgb(9, 6, 151);
+  --button-hover-text: #2a50fa;
+  background:rgb(13, 15, 133);
   --background: #dde3e7;
-  --card-color: #081ab6;
-  --text-color-primary: black;
-  --text-color-success: #007a46;
-  --text-color-error: #c83825;
-  --text-color-warning: #ff6600;
+  --text-color-primary: rgb(255, 255, 255);
 }
 
 .light {
   --color: #112d32;
-  background:#ECEFF1;
+  --color-secondary: #e6dd60;
+  --nav: rgb(240, 240, 175);
+  --nav-link: #6d6202;
+  --nav-link-exact: #e2a115;
+  --body: #fffcd6;
+  --footer: #fff99f;
+  --social: #614002;
+  --border: #ffd665;
+  --button: #ece6b1;
+  --button-hover: rgb(165, 161, 137);
+  --button-hover-text: #f0c871;
+  background:rgb(240, 240, 175);
   --background: #ECEFF1;
-  --card-color: #f7f7f7;
-  --text-color-primary: black;
-  --text-color-success: #007a46;
-  --text-color-error: #c83825;
-  --text-color-warning: #ff6600;
+  --text-color-primary: #6d6202;
 }
 .dark {
   --color: #c2c2c2;
-   background: #505050;
+  --color-secondary: #000121;
+  --nav: rgb(11, 11, 12);
+  --body: #081659;
+  --footer: #000121;
+  --social: #c2c2c2;
+   background: rgb(11, 11, 12);
   --background: #505050;
-  --card-color: #323232;
   --text-color-primary: white;
-  --text-color-success: #1eb980;
-  --text-color-error: #ff6859;
-  --text-color-warning: #ffcf44;
   
 }
 .orange {
   --color: #8e3d35;
+  --color-secondary: #000121;
+  --nav: #edc7b7;
+  --body: #081659;
+  --footer: #000121;
   background: #edc7b7;
   --background: #edc7b7;
-  --card-color: #f9f3f0;
   --text-color-primary: #8e3d35;
-  --text-color-success: #008b52;
-  --text-color-error: #e44838;
-  --text-color-warning: #ff9900;
 }
 .color-palettes {
   display: flex;
-  padding: 30px;
+  /* justify-content: right; */
 }
 
 input[type="radio"] {
@@ -284,6 +305,14 @@ input[type="radio"] {
   height: 40px;
   border-radius: 20px;
   border: 2px solid white;
+}
+
+.text {
+    transition: all 2s;
+}
+
+.router-link {
+    justify-content: center;
 }
 
 </style>

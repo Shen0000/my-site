@@ -14,7 +14,8 @@
         </div>
 
         <transition name="move-down">
-        <card class="box light" v-if="picked === 'light'"></card>
+        <card class="box blue" v-if="picked === 'blue'"></card>
+        <card class="box light" v-else-if="picked === 'light'"></card>
         <card class="box dark" v-else-if="picked === 'dark'"></card>
         <card class="box orange" v-else></card>
         </transition>
@@ -24,7 +25,7 @@
 
 <script>
 // @ is an alias to /src
-import Card from "/Users/brendan_shen/Documents/programming/Websites/my-site/src/components/Card.vue";
+import Card from "../components/Card.vue";
 
 export default {
   name: 'Theme',
@@ -33,17 +34,13 @@ export default {
   },
   data() {
     return {
-        picked : 'light',
-        colors: [
-        { id: 1, value: 'light' },
-        { id: 2, value: 'dark' },
-        { id: 3, value: 'orange' }
-        ]
+      picked: this.$picked,
+      colors: this.$colors,
     }
   },
   methods: {
     getColor(picked) {
-      this.picked = picked;
+      this.$picked = picked;
     },
   },
 }
@@ -56,6 +53,18 @@ export default {
   background-color: var(--background);
   position: absolute;
   /* font-family: 'Varela Round', sans-serif; */
+}
+
+.blue {
+  --color: #081659;
+  --color-secondary: #000121;
+  background:#078fe9;
+  --background: #dde3e7;
+  --card-color: #081ab6;
+  --text-color-primary: black;
+  --text-color-success: #007a46;
+  --text-color-error: #c83825;
+  --text-color-warning: #ff6600;
 }
 
 .light {

@@ -17,6 +17,7 @@
 
       <h2>Debate</h2>
       <p>I debate on the varsity team at my high school</p>
+      <p>{{$picked}}</p>
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="main-container">
+  <div id="app" class="main-container" v-bind:class="picked">
     <div id="nav">
       <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
       <router-link to="/about" class="nav-link">About</router-link>
@@ -7,6 +7,17 @@
       <router-link to="/projects" class="nav-link">Projects</router-link>
       <router-link to="/cs" class="nav-link">CS</router-link>
       <router-link to="/theme" class="nav-link">Theme</router-link>
+      <div class="color-palettes">
+        <input
+            v-for="color in colors"
+            type="radio"
+            class="input-color"
+            :class="color.value"
+            :value="color.value"
+            :key="color.index"
+            v-model="picked"
+        />
+        </div>
     </div>
     <body>
       <router-view/>
@@ -31,6 +42,22 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            colors: [
+                {id: 1, value: "blue"},
+                {id: 2, value: "light"},
+                {id: 3, value: "dark"},
+                {id: 4, value: "orange"},
+            ],
+            picked: "blue",
+        }
+    }
+}
+</script>
 
 <style>
 
@@ -79,7 +106,7 @@ body::-webkit-scrollbar {
 #nav {
     padding: 15px;
     text-align: left;
-    background-color: rgb(17, 4, 54);
+    background-color: var(--nav);
     vertical-align: middle;
     display: table;
     width: 100%;
@@ -197,6 +224,66 @@ footer {
 .title {
     padding-top: 3vh;
     padding-bottom: 3vh;
+}
+
+.blue {
+  --color: #081659;
+  --color-secondary: #000121;
+  --nav: rgb(17, 4, 54);
+  background:#078fe9;
+  --background: #dde3e7;
+  --card-color: #081ab6;
+  --text-color-primary: black;
+  --text-color-success: #007a46;
+  --text-color-error: #c83825;
+  --text-color-warning: #ff6600;
+}
+
+.light {
+  --color: #112d32;
+  background:#ECEFF1;
+  --background: #ECEFF1;
+  --card-color: #f7f7f7;
+  --text-color-primary: black;
+  --text-color-success: #007a46;
+  --text-color-error: #c83825;
+  --text-color-warning: #ff6600;
+}
+.dark {
+  --color: #c2c2c2;
+   background: #505050;
+  --background: #505050;
+  --card-color: #323232;
+  --text-color-primary: white;
+  --text-color-success: #1eb980;
+  --text-color-error: #ff6859;
+  --text-color-warning: #ffcf44;
+  
+}
+.orange {
+  --color: #8e3d35;
+  background: #edc7b7;
+  --background: #edc7b7;
+  --card-color: #f9f3f0;
+  --text-color-primary: #8e3d35;
+  --text-color-success: #008b52;
+  --text-color-error: #e44838;
+  --text-color-warning: #ff9900;
+}
+.color-palettes {
+  display: flex;
+  padding: 30px;
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+.input-color {
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 
 </style>

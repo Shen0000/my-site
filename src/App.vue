@@ -8,7 +8,7 @@
         <router-link to="/projects" class="nav-link">Projects</router-link>
         <router-link to="/cs" class="nav-link">CS</router-link>
         <router-link to="/theme" class="nav-link">Theme</router-link>
-        <h1 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h1>
+        <h2 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h2>
         <input
             v-for="color in colors"
             type="radio"
@@ -89,6 +89,7 @@ body::-webkit-scrollbar {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: rgb(207, 204, 204);
+    width:100%;
     margin: 0;
     padding: 0;
     height: 100%;

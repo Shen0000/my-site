@@ -193,6 +193,7 @@ input[type=submit] {
     border-radius: 10px;
     background-color: var(--button);
     border: 1px solid #111;
+    transition: background-color 2s;
 
 }
 input[type=submit]:hover {

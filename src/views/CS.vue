@@ -194,14 +194,15 @@ input[type=submit] {
     background-color: var(--button);
     border: 1px solid #111;
     transition: background-color 2s;
-
 }
+
 input[type=submit]:hover {
     cursor: pointer;
     text-transform: lowercase;
     background-color: var(--button-hover);
     color: var(--button-hover-text);
     border: 1px solid var(--button-hover-text);
+    transition: color 0s, background-color 0s;
 }
 
 .dropdown {

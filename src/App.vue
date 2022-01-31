@@ -132,6 +132,7 @@ body::-webkit-scrollbar {
 
 #nav a.router-link-exact-active {
     color: var(--nav-link-exact);
+    transition: color 2s;
 }
 
 .logo {

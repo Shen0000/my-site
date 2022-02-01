@@ -273,14 +273,20 @@ footer {
 }
 .dark {
   --color: #c2c2c2;
-  --color-secondary: #000121;
-  --nav: rgb(11, 11, 12);
-  --body: #081659;
-  --footer: #000121;
+  --color-secondary: #323232;
+  --nav: #323232;
+  --nav-link: #6d6202;
+  --nav-link-exact: #e2a115;
+  --body: #505050;
+  --footer: #323232 ;
   --social: #c2c2c2;
+  --border: #ffd665;
+  --button: #ece6b1;
+  --button-hover: rgb(165, 161, 137);
+  --button-hover-text: #f0c871;
    background: rgb(11, 11, 12);
   --background: #505050;
-  --text-color-primary: white;
+  --text-color-primary: #c2c2c2;
   
 }
 .orange {

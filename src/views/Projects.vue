@@ -87,7 +87,8 @@ export default {
 <style scoped>
 
 .projects {
-    line-height: 200%;
+  line-height: 200%;
+  padding-bottom: 5vh;
 }
 
 a:link {
@@ -181,7 +182,7 @@ a:active {
 }
 .hero-slider .carousel-cell .inner .btn:hover {
   background: #000;
-  color: #1446e9;
+  color: var(--nav);
 }
 .hero-slider .flickity-prev-next-button {
   width: 80px;

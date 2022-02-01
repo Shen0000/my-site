@@ -4,10 +4,10 @@
       <div class="color-palettes">
         <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
         <router-link to="/about" class="nav-link">About</router-link>
-        <router-link to="/academics" class="nav-link">Academics</router-link>
+        <!-- <router-link to="/academics" class="nav-link">Academics</router-link> -->
         <router-link to="/projects" class="nav-link">Projects</router-link>
         <router-link to="/cs" class="nav-link">CS</router-link>
-        <router-link to="/theme" class="nav-link">Theme</router-link>
+        <!-- <router-link to="/theme" class="nav-link">Theme</router-link> -->
         <h2 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h2>
         <input
             v-for="color in colors"
@@ -247,6 +247,7 @@ footer {
   --social: #57ddff;
   --border: #3a47f8;
   --button: #23a7ff;
+  --button-text: black;
   --button-hover: rgb(9, 6, 151);
   --button-hover-text: #2a50fa;
   background:rgb(13, 15, 133);
@@ -265,6 +266,7 @@ footer {
   --social: #614002;
   --border: #ffd665;
   --button: #ece6b1;
+  --button-text: black;
   --button-hover: rgb(165, 161, 137);
   --button-hover-text: #f0c871;
   background:rgb(240, 240, 175);
@@ -275,15 +277,16 @@ footer {
   --color: #c2c2c2;
   --color-secondary: #323232;
   --nav: #323232;
-  --nav-link: #6d6202;
-  --nav-link-exact: #e2a115;
+  --nav-link: #858585;
+  --nav-link-exact: #c0bcbc;
   --body: #505050;
-  --footer: #323232 ;
+  --footer: #2e2e2e ;
   --social: #c2c2c2;
-  --border: #ffd665;
-  --button: #ece6b1;
-  --button-hover: rgb(165, 161, 137);
-  --button-hover-text: #f0c871;
+  --border: #b1b1b1;
+  --button: #807e7d;
+  --button-text: rgb(0, 0, 0);
+  --button-hover: rgb(151, 151, 150);
+  --button-hover-text: #ffffff;
    background: rgb(11, 11, 12);
   --background: #505050;
   --text-color-primary: #c2c2c2;

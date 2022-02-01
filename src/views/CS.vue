@@ -192,8 +192,9 @@ input[type=submit] {
     margin-top: 30px;
     border-radius: 10px;
     background-color: var(--button);
+    color: var(--button-text);
     border: 1px solid #111;
-    transition: background-color 2s;
+    transition: background-color 2s, color 2s;
 }
 
 input[type=submit]:hover {
@@ -202,7 +203,7 @@ input[type=submit]:hover {
     background-color: var(--button-hover);
     color: var(--button-hover-text);
     border: 1px solid var(--button-hover-text);
-    transition: color 0s, background-color 0s;
+    /* transition: color 0s, background-color 0s; */
 }
 
 .dropdown {

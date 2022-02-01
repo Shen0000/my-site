@@ -1,19 +1,65 @@
 <template>
-  <div id="app" class="main-container">
+  <div id="app" class="main-container" v-bind:class="picked">
     <div id="nav">
-      <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
-      <router-link to="/about" class="nav-link">About</router-link>
-      <router-link to="/academics" class="nav-link">Academics</router-link>
-      <router-link to="/Projects" class="nav-link">Projects</router-link>
+      <div class="color-palettes">
+        <router-link to="/" class="nav-link" style="padding-left 10px">Home</router-link>
+        <router-link to="/about" class="nav-link">About</router-link>
+        <!-- <router-link to="/academics" class="nav-link">Academics</router-link> -->
+        <router-link to="/projects" class="nav-link">Projects</router-link>
+        <router-link to="/cs" class="nav-link">CS</router-link>
+        <!-- <router-link to="/theme" class="nav-link">Theme</router-link> -->
+        <h2 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h2>
+        <input
+            v-for="color in colors"
+            type="radio"
+            class="input-color"
+            :class="color.value"
+            :value="color.value"
+            :key="color.index"
+            v-model="picked"
+            style="margin-left: 20px;"
+        />
+        </div>
     </div>
     <body>
       <router-view/>
     </body>
     <footer>
-      <h1 style="color: rgb(255, 255, 255)">Hello World Footer</h1>
+      <!-- <h1 style="color: rgb(255, 255, 255)">Hello World Footer</h1> -->
+      <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="mailto: bshen.324@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://github.com/shen0000" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://codeforces.com/profile/bshen324" target="_blank"><i class="fas fa-laptop-code" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://www.facebook.com/brendan.shen.31/" target="_blank"><i class="fab fa-facebook square" aria-hidden="true"></i></a>
+          </li>
+      </ul>
+      
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            colors: [
+                {id: 1, value: "blue"},
+                {id: 2, value: "light"},
+                {id: 3, value: "dark"},
+                {id: 4, value: "orange"},
+            ],
+            picked: "blue",
+        }
+    }
+}
+</script>
 
 <style>
 
@@ -21,15 +67,16 @@
     margin: 0;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    /*min-height: 50vh;*/
+    min-height: 100vh;
     /*the above is*/
-    background-color: rgb(9, 23, 90);
+    color: var(--text-color-primary);
+    background-color: var(--body);
+    transition: background-color 2s, color 2s;
 }
 
 body::-webkit-scrollbar {
@@ -42,10 +89,10 @@ body::-webkit-scrollbar {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: rgb(207, 204, 204);
+    width:100%;
     margin: 0;
     padding: 0;
     height: 100%;
-    
 }
 
 #type {
@@ -64,17 +111,19 @@ body::-webkit-scrollbar {
 #nav {
     padding: 15px;
     text-align: left;
-    background-color: rgb(17, 4, 54);
+    background-color: var(--nav);
     vertical-align: middle;
     display: table;
     width: 100%;
+    transition: all 2s;
 }
 
 
 #nav a {
     font-weight: bold;
     vertical-align: middle;
-    color: #4d77ff;
+    color: var(--nav-link);
+    transition: color 2s;
 }
 
 #nav a:hover {
@@ -82,7 +131,8 @@ body::-webkit-scrollbar {
 }
 
 #nav a.router-link-exact-active {
-    color: #1302ff;
+    color: var(--nav-link-exact);
+    transition: color 2s;
 }
 
 .logo {
@@ -93,7 +143,7 @@ body::-webkit-scrollbar {
 }
 .main-container {
     /*min-height: 100vh;*/
-    overflow: hidden;
+    overflow: show;
     display: block;
     position: relative;
     margin: 0;
@@ -129,12 +179,13 @@ body::-webkit-scrollbar {
 }
 
 footer {
-	background-color: rgb(0, 1, 34);
-	padding: 25px;
+	background-color: var(--footer);
+    /* padding: 3vw; */
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     height: 15%;
     width: 100%;
-    position:fixed;
-    bottom:0;
+    transition: all 2s;
 }
 
 .footer-text {
@@ -175,13 +226,104 @@ footer {
 
 .social-list__link {
 	font-size: 40px;
-	color: #ffbc57;
+	color: var(--social);
 	padding: .5em;
+    transition: color 2s;
 }
 
 .title {
     padding-top: 3vh;
     padding-bottom: 3vh;
+}
+
+.blue {
+  --color: #081659;
+  --color-secondary: #000121;
+  --nav: rgb(13, 15, 133);
+  --nav-link: #4db8ff;
+  --nav-link-exact: #02f7ff;
+  --body: #081659;
+  --footer: #000121;
+  --social: #57ddff;
+  --border: #3a47f8;
+  --button: #23a7ff;
+  --button-text: black;
+  --button-hover: rgb(9, 6, 151);
+  --button-hover-text: #2a50fa;
+  background:rgb(13, 15, 133);
+  --background: #dde3e7;
+  --text-color-primary: rgb(255, 255, 255);
+}
+
+.light {
+  --color: #112d32;
+  --color-secondary: #e6dd60;
+  --nav: rgb(240, 240, 175);
+  --nav-link: #6d6202;
+  --nav-link-exact: #e2a115;
+  --body: #fffcd6;
+  --footer: #fff99f;
+  --social: #614002;
+  --border: #ffd665;
+  --button: #ece6b1;
+  --button-text: black;
+  --button-hover: rgb(165, 161, 137);
+  --button-hover-text: #f0c871;
+  background:rgb(240, 240, 175);
+  --background: #ECEFF1;
+  --text-color-primary: #6d6202;
+}
+.dark {
+  --color: #c2c2c2;
+  --color-secondary: #323232;
+  --nav: #323232;
+  --nav-link: #858585;
+  --nav-link-exact: #c0bcbc;
+  --body: #505050;
+  --footer: #2e2e2e ;
+  --social: #c2c2c2;
+  --border: #b1b1b1;
+  --button: #807e7d;
+  --button-text: rgb(0, 0, 0);
+  --button-hover: rgb(151, 151, 150);
+  --button-hover-text: #ffffff;
+   background: rgb(11, 11, 12);
+  --background: #505050;
+  --text-color-primary: #c2c2c2;
+  
+}
+.orange {
+  --color: #8e3d35;
+  --color-secondary: #000121;
+  --nav: #edc7b7;
+  --body: #081659;
+  --footer: #000121;
+  background: #edc7b7;
+  --background: #edc7b7;
+  --text-color-primary: #8e3d35;
+}
+.color-palettes {
+  display: flex;
+  /* justify-content: right; */
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+.input-color {
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+.text {
+    transition: all 2s;
+}
+
+.router-link {
+    justify-content: center;
 }
 
 </style>

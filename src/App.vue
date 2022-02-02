@@ -287,7 +287,7 @@ footer {
   --button-text: rgb(0, 0, 0);
   --button-hover: rgb(151, 151, 150);
   --button-hover-text: #ffffff;
-   background: rgb(11, 11, 12);
+   background: #323232;
   --background: #505050;
   --text-color-primary: #c2c2c2;
   

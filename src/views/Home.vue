@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <h1>Hello, welcome to my website!</h1>
-    <h2>I am a sophomore from the class of 2024.</h2>
-    <h2>Check out the other pages to learn more about me and what I do.</h2>
+    <div class="welcome">
+      <h1>Hello, welcome to my website!</h1>
+      <h2>I am a sophomore from the class of 2024.</h2>
+      <h2>Check out the other pages to learn more about me and what I do.</h2>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -29,6 +31,10 @@ export default {
   background-image: url(https://cdn.wallpapersafari.com/28/2/vrIzJD.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.welcome {
+  line-height: 5;
 }
 
 </style>

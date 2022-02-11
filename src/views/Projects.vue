@@ -13,9 +13,7 @@
               <i>background credit to <a href="https://dev.generals.io/" target="empty">dev.generals.io</a></i> 
             </h3>
             <div class="empty"></div>
-            <a href="https://github.com/Shen0000/Generals.io-bot-python" class="btn" target="empty"
-              >github.com</a
-            >
+            <a href="https://github.com/Shen0000/Generals.io-bot-python" class="btn" target="empty">github repository</a>
           </div>
         </div>
 

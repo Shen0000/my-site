@@ -57,7 +57,21 @@ export default {
             ],
             picked: "blue",
         }
-    }
+    },
+    mounted() {
+      console.log('App Mounted');
+      if (localStorage.getItem('picked'))
+        this.picked = localStorage.getItem('picked');
+    },
+    watch: {
+      picked: {
+        handler() {
+          console.log('Theme changed!');
+          localStorage.setItem('picked', this.picked);
+        },
+        deep: true,
+      },
+    },
 }
 </script>
 

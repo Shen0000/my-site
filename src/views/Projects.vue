@@ -19,7 +19,7 @@
           </div>
         </div>
 
-        <div class="carousel-cell" id="slide-2">
+        <!-- <div class="carousel-cell" id="slide-2">
           <div class="overlay"></div>
           <div class="inner">
             <h2 class="title">Slide 2<span class="ctf"></span></h2>
@@ -46,7 +46,7 @@
               >usaco.org</a
             >
           </div>
-        </div>
+        </div> -->
       </flickity>
   </div>
 </template>

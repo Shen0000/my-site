@@ -8,6 +8,8 @@
         <router-link to="/projects" class="nav-link">Projects</router-link>
         <router-link to="/cs" class="nav-link">CS</router-link>
         <!-- <router-link to="/theme" class="nav-link">Theme</router-link> -->
+        <router-link to="/blogs" class="nav-link">Blogs</router-link>
+        <router-link to="/misc" class="nav-link">Misc</router-link>
         <h2 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h2>
         <input
             v-for="color in colors"
@@ -38,6 +40,9 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="https://www.facebook.com/brendan.shen.31/" target="_blank"><i class="fab fa-facebook square" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://www.linkedin.com/in/brendan-shen-642b79230/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
           </li>
       </ul>
       

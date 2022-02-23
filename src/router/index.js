@@ -4,6 +4,8 @@ import Academics from '../views/Academics.vue'
 import Projects from '../views/Projects.vue'
 import CS from '../views/CS.vue'
 import Theme from '../views/Theme.vue'
+import Blogs from '../views/Blogs.vue'
+import Misc from '../views/Misc.vue'
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: '/theme',
     name: 'Theme',
     component: Theme
+  },
+  {
+    path: '/blogs',
+    name: 'Blogs',
+    component: Blogs
+  },
+  {
+    path: '/misc',
+    name: 'Misc',
+    component: Misc
   },
   {
     path: '/about',

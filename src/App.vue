@@ -58,7 +58,7 @@ export default {
                 {id: 1, value: "blue"},
                 {id: 2, value: "light"},
                 {id: 3, value: "dark"},
-                {id: 4, value: "orange"},
+                {id: 4, value: "neon"},
             ],
             picked: "blue",
         }
@@ -311,15 +311,23 @@ footer {
   --text-color-primary: #c2c2c2;
   
 }
-.orange {
+.neon {
   --color: #8e3d35;
-  --color-secondary: #000121;
-  --nav: #edc7b7;
-  --body: #081659;
-  --footer: #000121;
-  background: #edc7b7;
-  --background: #edc7b7;
-  --text-color-primary: #8e3d35;
+  --color-secondary: #64DFDF;
+  --nav: #252525;
+  --nav-link: #a10ae7;
+  --nav-link-exact: #ee37cf;
+  --body: #6930C3;
+  --footer: #2f1544;
+  --social: #80FFDB;
+  --border: #eb7a39;
+  --button: #80FFDB;
+  --button-text: rgb(0, 0, 0);
+  --button-hover: #6930C3;
+  --button-hover-text: #64DFDF;
+   background: #64DFDF;
+  --background: #f80000;
+  --text-color-primary: #64DFDF;
 }
 .color-palettes {
   display: flex;

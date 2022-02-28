@@ -5,7 +5,7 @@
     <p>This is the page that opens on <strong>/post/{{ $route.params.id }}</strong> route</p> -->
     <div v-if="blog && blog['status']">
         <h1><strong>{{blog['title']}}</strong></h1>
-        <br><br><br><br><br><br><br>
+        <br><br><br><br><h2>{{blog['author']}}</h2><br><h3>{{blog['date']}}</h3><br><br><br>
         <span class="a" v-html="blog['content']"></span>
     </div>
     <div v-else-if="blog && !blog['status']">
@@ -43,6 +43,22 @@ h1 {
     1px 1px 0 #000,
     4px 4px 5px var(--color-secondary);
     transition: text-shadow 2s;
+}
+
+h2 {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+h3 {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .post {

@@ -1,11 +1,21 @@
 [
   {
     "id": 0,
+    "status": 1,
+    "date": "2/27/22",
+    "author": "Brendan Shen",
+    "color": "white",
+    "title": "Hello World!",
+    "title-image": "https://fullhdwall.com/wp-content/uploads/2016/03/Cool-Landscape.jpg",
+    "content": "<p class='b'>Hello everyone! I am excited to share my thoughts and experiences here through various blogs! Since I am into computer science, this will be my “Hello World” of blog posts. The posts I plan to put out will vary in terms of topics, and I hope to have a good flow of content to keep things interesting around here. If you have a request for a post, please email me. I am always open to suggestions! In the meantime, I will be working on the first real blog. See you when it drops!</p>"
+  },
+  {
+    "id": 1,
     "status": 0,
     "date": "?",
+    "author": "Brendan Shen",
     "color": "white",
     "title": "???",
     "title-image": "https://defected.com/media/magefan_blog/images_mysteryitem.png",
-    "content": ""
   }
 ]

@@ -39,7 +39,7 @@ export default {
     max-width: 1500px;
     grid-row-gap: 50px;
     grid-column-gap: 50px;
-    margin: 0 auto;
+    margin: 3vh auto;
 }
 .blogs-div {
     padding: 50px;

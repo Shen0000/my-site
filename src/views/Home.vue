@@ -9,6 +9,8 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <img src="../assets/semi1.png" alt="semi">
+    <img src="../assets/award.png" alt="">
   </div>
 </template>
 
@@ -28,9 +30,9 @@ export default {
 
 .home {
   padding: 10px;
-  background-image: url(https://cdn.wallpapersafari.com/28/2/vrIzJD.jpg);
+  /* background-image: url(https://cdn.wallpapersafari.com/28/2/vrIzJD.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .welcome {

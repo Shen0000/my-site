@@ -257,7 +257,7 @@ footer {
 
 .blue {
   --color: #081659;
-  --color-secondary: #000121;
+  --color-secondary: #9f07e6;
   --nav: rgb(13, 15, 133);
   --nav-link: #4db8ff;
   --nav-link-exact: #02f7ff;
@@ -276,7 +276,7 @@ footer {
 
 .light {
   --color: #112d32;
-  --color-secondary: #e6dd60;
+  --color-secondary: #92ee68;
   --nav: rgb(240, 240, 175);
   --nav-link: #6d6202;
   --nav-link-exact: #e2a115;
@@ -294,7 +294,7 @@ footer {
 }
 .dark {
   --color: #c2c2c2;
-  --color-secondary: #323232;
+  --color-secondary: #0a0a0a;
   --nav: #323232;
   --nav-link: #858585;
   --nav-link-exact: #c0bcbc;
@@ -313,7 +313,7 @@ footer {
 }
 .neon {
   --color: #8e3d35;
-  --color-secondary: #64DFDF;
+  --color-secondary: red;
   --nav: #252525;
   --nav-link: #a10ae7;
   --nav-link-exact: #ee37cf;

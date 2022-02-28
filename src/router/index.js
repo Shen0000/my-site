@@ -6,6 +6,7 @@ import CS from '../views/CS.vue'
 import Theme from '../views/Theme.vue'
 import Blogs from '../views/Blogs.vue'
 import Misc from '../views/Misc.vue'
+import Post from '../views/Post.vue'
 
 const routes = [
   {
@@ -36,12 +37,18 @@ const routes = [
   {
     path: '/blogs',
     name: 'Blogs',
-    component: Blogs
+    component: Blogs,
+    alias: ['/blog', '/posts']
   },
   {
     path: '/misc',
     name: 'Misc',
     component: Misc
+  },
+  {
+    path: '/post/:id',
+    name: 'Post',
+    component: Post
   },
   {
     path: '/about',

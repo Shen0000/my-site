@@ -203,8 +203,9 @@ input[type=submit]:hover {
 .dropdown {
     width: 30vw;
     position: relative;
-    border: 1px solid #3a47f8;
+    /* border: 1px solid #3a47f8; */
     border-radius: 5px;
+    /* transition: all 2s; */
 }
 
 </style>

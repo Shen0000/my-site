@@ -272,6 +272,21 @@ footer {
   background:rgb(13, 15, 133);
   --background: #dde3e7;
   --text-color-primary: rgb(255, 255, 255);
+
+  --vs-controls-color: #0513db;
+  --vs-border-color: #0513db;
+
+  --vs-dropdown-bg: var(--footer);
+  --vs-dropdown-color: var(--text-color-primary);
+  --vs-dropdown-option-color: var(--text-color-primary);
+
+  --vs-selected-bg: #240c7c;
+  --vs-selected-color: #eeeeee;
+
+  --vs-search-input-color: #eeeeee;
+
+  --vs-dropdown-option--active-bg: #192c80;
+  --vs-dropdown-option--active-color: #51b1f1;
 }
 
 .light {
@@ -291,6 +306,21 @@ footer {
   background:rgb(240, 240, 175);
   --background: #ECEFF1;
   --text-color-primary: #6d6202;
+
+  --vs-controls-color: #db9209;
+  --vs-border-color: #db9209;
+
+  --vs-dropdown-bg: var(--footer);
+  --vs-dropdown-color: var(--text-color-primary);
+  --vs-dropdown-option-color: var(--text-color-primary);
+
+  --vs-selected-bg: #c0810b;
+  --vs-selected-color: #db9209;
+
+  --vs-search-input-color: #db9209;
+
+  --vs-dropdown-option--active-bg: #f1eb8d;
+  --vs-dropdown-option--active-color: #db9209;
 }
 .dark {
   --color: #c2c2c2;
@@ -310,6 +340,20 @@ footer {
   --background: #505050;
   --text-color-primary: #c2c2c2;
   
+  --vs-controls-color: #a3a2a5;
+  --vs-border-color: #c4c3ca;
+
+  --vs-dropdown-bg: var(--footer);
+  --vs-dropdown-color: var(--text-color-primary);
+  --vs-dropdown-option-color: var(--text-color-primary);
+
+  --vs-selected-bg: #928e9e;
+  --vs-selected-color: #eeeeee;
+
+  --vs-search-input-color: #eeeeee;
+
+  --vs-dropdown-option--active-bg: #413f47;
+  --vs-dropdown-option--active-color: #eeeeee;
 }
 .neon {
   --color: #8e3d35;
@@ -328,6 +372,21 @@ footer {
    background: #64DFDF;
   --background: #f80000;
   --text-color-primary: #64DFDF;
+
+  --vs-controls-color: #664cc3;
+  --vs-border-color: #664cc3;
+
+  --vs-dropdown-bg: #282c34;
+  --vs-dropdown-color: #cc99cd;
+  --vs-dropdown-option-color: #cc99cd;
+
+  --vs-selected-bg: #664cc3;
+  --vs-selected-color: #eeeeee;
+
+  --vs-search-input-color: #eeeeee;
+
+  --vs-dropdown-option--active-bg: #664cc3;
+  --vs-dropdown-option--active-color: #eeeeee;
 }
 .color-palettes {
   display: flex;

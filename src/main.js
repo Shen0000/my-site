@@ -11,6 +11,6 @@ app.config.globalProperties.$picked = "blue";
 app.config.globalProperties.$colors = [
     {id: 1, value: 'light'},
     {id: 2, value: 'dark'},
-    {id: 3, value: 'orange'},
+    {id: 3, value: 'neon'},
     {id: 4, value: 'blue'},
 ];

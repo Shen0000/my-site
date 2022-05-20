@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import blogData from "../blogs/blogs.json";
+import blogData from "../json/blogs.json";
 
 export default {
     data() {

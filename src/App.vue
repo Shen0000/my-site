@@ -8,6 +8,7 @@
         <router-link to="/projects" class="nav-link">Projects</router-link>
         <router-link to="/cs" class="nav-link">CS</router-link>
         <!-- <router-link to="/theme" class="nav-link">Theme</router-link> -->
+        <router-link to="/poetry" class="nav-link">Poetry</router-link>
         <router-link to="/blogs" class="nav-link">Blogs</router-link>
         <router-link to="/misc" class="nav-link">Misc</router-link>
         <h2 style="padding-left: 20px; color: var(--text-color-primary); transition: all 2s;">Choose a theme: </h2>
@@ -81,6 +82,8 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Square+Peg&family=Yantramanav:wght@300&display=swap');
 
 * {
     margin: 0;

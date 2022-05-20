@@ -7,6 +7,8 @@ import Theme from '../views/Theme.vue'
 import Blogs from '../views/Blogs.vue'
 import Misc from '../views/Misc.vue'
 import Post from '../views/Post.vue'
+import Poetry from '../views/Poetry.vue'
+import Poem from '../views/Poem.vue'
 
 const routes = [
   {
@@ -49,6 +51,16 @@ const routes = [
     path: '/post/:id',
     name: 'Post',
     component: Post
+  },
+  {
+    path: '/poetry',
+    name: 'Poetry',
+    component: Poetry
+  },
+  {
+    path: '/poem/:id',
+    name: 'Poem',
+    component: Poem
   },
   {
     path: '/about',

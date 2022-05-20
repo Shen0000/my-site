@@ -1,6 +1,6 @@
 // /views/Poem.vue
 <template>
-  <div class="poem">
+  <div class="poem" :style="{'background-image': 'URL(' + poem['background-image'] + ')', 'background-size': poem['bwidth'] + ' ' + poem['bheight']}">
     <!-- <h1> Welcome to the Poem page </h1>
     <p>This is the page that opens on <strong>/poem/{{ $route.params.id }}</strong> route</p> -->
     <div v-if="poem && poem['status']">

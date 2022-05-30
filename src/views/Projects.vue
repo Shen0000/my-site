@@ -17,21 +17,22 @@
           </div>
         </div>
 
-        <!-- <div class="carousel-cell" id="slide-2">
+        <div class="carousel-cell" id="slide-2">
           <div class="overlay"></div>
           <div class="inner">
-            <h2 class="title">Slide 2<span class="ctf"></span></h2>
-            <h3 class="date">cs club<br />--- Spring 2021 ---</h3>
+            <h2 class="title">Inspiration Quotation<span class="ctf"></span></h2>
+            <h3 class="date">timathon<br />--- Spring 2022 ---</h3>
 
             <h3 class="subtitle">
+              <em> For the 2022 April <a href="https://twtcodejam.net/pages/timathonfaq" target="empty">Timathon</a> team WaylandByte made Inspiration Quotation, a tool to make every day less ordinary. The idea is that every day the user will get a new quote based on their preferences. Check out the site <a href="https://github.com/Shen0000/InspirationQuotation#requirements" target="empty">here</a>.</em>
             </h3>
             <div class="empty"></div>
-           <a href="https://play.picoctf.org/events/34/scoreboards#35" class="btn" target="empty">Spring 2021 Scoreboard</a>
+           <a href="https://github.com/Shen0000/InspirationQuotation" class="btn" target="empty">Check out the source code!</a>
           </div>
  
         </div>
 
-        <div class="carousel-cell" id="slide-3">
+        <!-- <div class="carousel-cell" id="slide-3">
           <div class="overlay"></div>
           <div class="inner">
             <h2 class="title"></h2>
@@ -258,6 +259,54 @@ a:active {
       margin-bottom: 10px;
     }
   }
+}
+
+#slide-2 .overlay {
+  background-image: url(../assets/iq_logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%, 40%;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+@media (max-width: 1050px) {
+  .hero-slider .carousel-cell .inner .title,
+  #slide-2 .title {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-slider .carousel-cell .inner .title,
+  #slide-2 .title {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-slider .carousel-cell .inner .title,
+  #slide-2 .title {
+    font-size: 50px;
+  }
+
+  .hero-slider .carousel-cell .inner .subtitle {
+    width: 250px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-slider .carousel-cell .inner .title,
+  #slide-2 .title {
+    font-size: 35px;
+    /*margin-bottom: 20px;*/
+  }
+  /* @media (max-width: 1000px) {
+    #slide-1 .title, #slide-2 .title, #slide-3 .title {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+  } */
 }
 
 </style>
